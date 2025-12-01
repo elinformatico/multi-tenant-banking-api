@@ -138,13 +138,3 @@ public class StatementJob {
         this.completedAt = completedAt;
     }
 }
-
-/**
- * Enum for job status tracking
- */
-enum JobStatus {
-    PENDING,
-    PROCESSING,
-    COMPLETED,
-    FAILED
-}
