@@ -1,4 +1,6 @@
 package com.banking.entity;
 
-public class TransactionType {
+public enum TransactionType {
+    DEPOSIT,
+    WITHDRAWAL
 }
