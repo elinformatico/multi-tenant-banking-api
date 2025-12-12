@@ -43,3 +43,17 @@ Note: Restart PSQL Service
 
 $psql -l -U postgres  (List Database Users)
 
+To Fix the below error in IntelliJ
+***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+Reason: Failed to determine a suitable driver class
+
+We need to Run/Debug Configurations options on "BankingApplication" --> Edit Configuration
+and add in Environment Variables or Program Arguments below configuration
+--spring.profiles.active=dev
+
+Also, you can add a VM Option using below config.
+-Dspring.profiles.active=dev
