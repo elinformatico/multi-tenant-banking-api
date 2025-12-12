@@ -1,0 +1,45 @@
+# MySQL Installation
+Open Terminal and run the following command to install the latest version of MySQL.
+$ brew install mysql
+
+Start the MySQL service: Once the installation is complete, start the MySQL server as a background service using brew services.
+$ brew services start mysql
+
+You can check the service status:
+$brew services list
+
+Secure your installation:
+The default installation has no root password.
+It is highly recommended to run the security script to set a password and remove insecure default settings.
+$mysql_secure_installation
+
+Follow the on-screen prompts to set a root password, remove anonymous users, disable remote root login, and remove the test database.
+Connect to MySQL: After setting a password, you can connect to the MySQL monitor using the following command, which will prompt you for the password you just set.
+$mysql -u root -p
+
+Once connected, you will see the mysql> prompt and can begin using the database server.
+Managing the MySQL Service
+You can manage the MySQL service using these common brew services commands:
+
+Stop the service:
+$brew services stop mysql
+
+Restart the service:
+$brew services restart mysql
+
+Stop the service from running automatically on startup:
+$brew services unload mysql
+
+
+POSTGRESQL
+$brew install postgresql
+$brew services start postgresql
+$psql --version
+$brew services restart postgresql
+
+Change postgres password (Within Postgres Session)
+\password postgres
+Note: Restart PSQL Service
+
+$psql -l -U postgres  (List Database Users)
+
