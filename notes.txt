@@ -57,3 +57,13 @@ and add in Environment Variables or Program Arguments below configuration
 
 Also, you can add a VM Option using below config.
 -Dspring.profiles.active=dev
+
+Execute App from Command Line
+$mvn spring-boot:run -Dspring-boot.run.profiles=dev
+
+Package in JAR to use outside of IDE or Production skipping Test Cases
+$mvn clean package -DskipTests
+
+Execute de Application
+java -jar target/banking-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+
